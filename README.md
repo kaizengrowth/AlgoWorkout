@@ -30,3 +30,4 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
 * [1:53pm] -- Finished initial setup for app: webpack, Node/Express, React/Redux, MongoDB
 * [3:47pm] -- Created [wireframe](/docs/wireframe_june7.png) in Excaliber, and roughly planned out database schema and React components
 * [4:50pm] -- Messed around with MongoDB then Postgres then back to MongoDB. Will stick with MongoDB. Added 3 sample questions as documents to collection in database.
+* [7:03pm] -- Really struggled with getting anything to work on remote MongoDB database. Won't let me change settings or add endpoints. Finally moved to local MongoDB database. Had to delete and reinstall node modules to get this to work. Very frustrating!!

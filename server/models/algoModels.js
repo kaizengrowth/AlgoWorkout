@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 // const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const MONGO_URI = 'mongodb+srv://kaizengrowth:codesmith@kz-soloproject.a5wlyjv.mongodb.net/?retryWrites=true&w=majority';
+// const MONGO_URI = 'mongodb+srv://kaizengrowth:codesmith@kz-soloproject.a5wlyjv.mongodb.net/?retryWrites=true&w=majority';
+
+// const MONGO_URI = 'mongodb://127.0.0.1:27017/algos';
 
 // mongodb connection
 /*
@@ -15,15 +17,25 @@ client.connect(err => {
 });
 */
 
-mongoose.connect(MONGO_URI, { 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true, 
-    dbName: 'algos'
-})
-    .then(() => console.log('Connected to Mongo DB.'))
-    .catch(err => console.log(err));s
+// mongoose.connect(MONGO_URI, { 
+//     useNewUrlParser: true, 
+//     useUnifiedTopology: true, 
+//     dbName: 'algos'
+// })
+//     .then(() => console.log('Connected to Mongo DB.'))
+//     .catch(err => console.log(err));s
 
-// axios code from mongodb
+// db = mongoose.connection
+// db.once('open', _ => {
+//     console.log('Database connected:', url)
+//   })
+  
+//   db.on('error', err => {
+//     console.error('connection error:', err)
+//   })
+
+// axios code from mongodb 
+/*
 var axios = require('axios');
 var data = JSON.stringify({
     "collection": "leetcodeQuestions",
@@ -52,7 +64,7 @@ axios(config)
     .catch(function (error) {
         console.log(error);
     });
-
+*/
 
 // schema for 'algo'
 const algoSchema = new Schema({
@@ -69,3 +81,7 @@ const algoSchema = new Schema({
     confidence: Number,
     notes: String
 })
+
+const algoModel = mongoose.model('algoModel', algoSchema );
+
+module.exports = algoModel;
