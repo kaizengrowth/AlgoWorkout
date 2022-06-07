@@ -13,7 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 // static files
 app.use(express.static(path.resolve(__dirname, '../')));
 
-
 // apiRouter
 // const apiRouter = require(path.join(__dirname, 'routes/api.js'));
 app.use('/api', apiRouter);

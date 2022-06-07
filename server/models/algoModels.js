@@ -21,7 +21,38 @@ mongoose.connect(MONGO_URI, {
     dbName: 'algos'
 })
     .then(() => console.log('Connected to Mongo DB.'))
-    .catch(err => console.log(err));
+    .catch(err => console.log(err));s
+
+// axios code from mongodb
+var axios = require('axios');
+var data = JSON.stringify({
+    "collection": "leetcodeQuestions",
+    "database": "algos",
+    "dataSource": "KZ-SoloProject",
+    "projection": {
+        "_id": 1
+    }
+});
+            
+var config = {
+    method: 'post',
+    url: 'https://data.mongodb-api.com/app/data-zpxov/endpoint/data/beta/action/findOne',
+    headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*',
+        'api-key': 'CsPtTdNN8ynH9VkBuhbTRDeum15eOc2kbVUfP5IxXtW28kA6cwbqRm9ez2h9Lr5n'
+    },
+    data : data
+};
+            
+axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+
 
 // schema for 'algo'
 const algoSchema = new Schema({

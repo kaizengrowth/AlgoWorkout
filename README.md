@@ -16,7 +16,9 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
     * [x] created [wireframes for dashboard & data models](/docs/wireframe_june7.png) using ExCaliber
 
 ## Task 1. AlgoModel / Controller / Component
-* [ ] Put 5 dummy problems in MongoDB database. 
+* [x] Put 3 dummy problems in MongoDB database. 
+* [x] Enable DataAPI in MongoDB database through Atlas UI: "read and write."
+* [x] Create API key. Generate Axios snippet and put into codebase.
 * [ ] Test GET/POST/PUT/DELETE routes for database in Postman
 * [ ] Set up server.js & algoController to GET a problem.
 * [ ] Display problem in front end, without Redux.js
@@ -27,3 +29,4 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
 ### Tue. 6/7/22 
 * [1:53pm] -- Finished initial setup for app: webpack, Node/Express, React/Redux, MongoDB
 * [3:47pm] -- Created [wireframe](/docs/wireframe_june7.png) in Excaliber, and roughly planned out database schema and React components
+* [4:50pm] -- Messed around with MongoDB then Postgres then back to MongoDB. Will stick with MongoDB. Added 3 sample questions as documents to collection in database.
