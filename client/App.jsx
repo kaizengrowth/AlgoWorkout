@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import MainContainer from './containers/MainContainer.jsx'
-
-const App = () => (
-  <div id="app">
-      <MainContainer/>
-  </div>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      questions: [],
+    };
+  }
+  componentDidMount() {
+    fetch("http://localhost:8888/api/")
+      .then((data) => data.json())
+      .then((data) => this.setState({
+        questions: data
+      }))
+      .catch((err) => console.log(err) 
+    )
+  }
+  
+  render() {
+    return (<div id="app">
+      App
+      {JSON.stringify(this.state.questions)}
+      {/* < MainContainer questions={this.state.questions} /> */}
+    </div>)
+  }
+}  
 
 export default App;
