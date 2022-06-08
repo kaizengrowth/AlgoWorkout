@@ -1,49 +1,39 @@
- import React from 'react';
+ import React, { Component } from 'react';
  import QuestionCreator from '../components/QuestionCreator.jsx';
  import QuestionsDisplay from '../components/QuestionsDisplay.jsx';
 
- const url = 'http://localhost:8888/api/';
 
  class QuestionsContainer extends React.Component {
+
   constructor(props) {
     super(props);
-    this.state = {
-      questions: [],
-    };
-  }
-
-  componentDidMount() {
-    fetch(url)
-      .then((data) => data.json())
-      .then((data) => (this.setState({
-        questions: data
-      })))
-      .catch((err) => console.log(err) 
-    )
   }
 
   render() {
-    let questionsToday = [];
-    for (let i = 0; i < this.state.questions.length; i++) {
-      // questionsToday.push(
-      //   <Question 
-      //     key={`Question{i}`} 
-      //     id={this.state.questions[i]._id}
-      //   />
-      // )
-
-      console.log(this.state.questions[i]);
+    console.log('this.props.questions: ' + this.props.questions);
+    let todaysQuestions = ['123', '213'];
+    console.log('length: ' + this.props.questions.length);
+    for (let question of this.props.questions) {
+      console.log('name:' + question['name']);
+      // todaysQuestions.push(this.props.questions[i]["name"]);
     }
-
-    <div className="innerbox">
-     <h3>Problems</h3>
-     <div>
-      <QuestionCreator/>
-      <QuestionsDisplay/>
-     </div>
-   </div>
-  }
- }
+    return (
+      <div className="questionsContainer">
+        <div className="innerbox">
+          <h3>Problems</h3>
+          <div>
+            {todaysQuestions}
+            Question 1
+            Question 2
+            {/* <QuestionCreator/>
+            <QuestionsDisplay/> */}
+          </div>
+        </div>
+      </div>
+    )
+  };
+ 
+}
 
  export default QuestionsContainer;
  
