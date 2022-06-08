@@ -35,7 +35,6 @@ db.on('error', err => {
 })
 
 // apiRouter
-// const apiRouter = require(path.join(__dirname, 'routes/api.js'));
 app.use('/api', apiRouter);
 
 // catch-all route handler
