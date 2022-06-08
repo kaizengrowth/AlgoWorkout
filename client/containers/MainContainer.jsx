@@ -1,6 +1,6 @@
 import React from 'react';
 import TotalsDisplay from '../components/TotalsDisplay.jsx';
-import AssetsContainer from './AssetsContainer.jsx';
+import QuestionsContainer from './QuestionsContainer.jsx';
 //import * as actions from '../actions/actions.js';
 //import { connect } from 'react-redux';
  
@@ -11,7 +11,7 @@ import AssetsContainer from './AssetsContainer.jsx';
      <h2>Today's Questions</h2>
      <div className="outerBox">
        <TotalsDisplay />
-       <AssetsContainer />
+       <QuestionsContainer />
      </div>
    </div>
  );

@@ -19,9 +19,9 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
 * [x] Put 3 dummy problems in MongoDB database. 
 * [x] Enable DataAPI in MongoDB database through Atlas UI: "read and write."
 * [x] Create API key. Generate Axios snippet and put into codebase.
-* [ ] Test GET/POST/PUT/DELETE routes for database in Postman
-* [ ] Set up server.js & algoController to GET a problem.
-* [ ] Display problem in front end, without Redux.js
+* [x] Test GET routes for database in Postman
+* [x] Set up server.js & algoController to GET a problem.
+* [ ] Display problem in front end, without Redux
 
 * [ ] Multiple steps: Figure out Redux actions / dispatch / reducer for getting a problem... 
 
@@ -45,3 +45,10 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
 
 Next step:
 Try to simply get one card into Mongo database and fetched into server.js
+
+
+### Wed. 6/8/22
+Early morning -- connecting with everyone and helping troubleshoot.
+Now back to problem of displaying data in React components.
+
+* [11:44am] -- Display cards in front end React. Fetch from

@@ -13,5 +13,4 @@ algoController.getQuestions = (req, res, next) => {
     })
 }
 
-
 module.exports = algoController;
