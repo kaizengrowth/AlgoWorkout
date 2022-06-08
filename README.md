@@ -21,9 +21,10 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
 * [x] Create API key. Generate Axios snippet and put into codebase.
 * [x] Test GET routes for database in Postman
 * [x] Set up server.js & algoController to GET a problem.
-* [ ] Display problem in front end, without Redux
+* [x] Call backend API from App.jsx, and save data into state.
+* [ ] Display question in question container in the front end, <del>with</del> without Redux
 
-* [ ] Multiple steps: Figure out Redux actions / dispatch / reducer for getting a problem... 
+<del>* [ ] Multiple steps: Figure out Redux actions / dispatch / reducer for getting a problem... </del>
 
 ## Log
 ### Tue. 6/7/22 
@@ -51,4 +52,5 @@ Try to simply get one card into Mongo database and fetched into server.js
 Early morning -- connecting with everyone and helping troubleshoot.
 Now back to problem of displaying data in React components.
 
-* [11:44am] -- Display cards in front end React. Fetch from
+* [11:44am] -- Display cards in front end React. Fetch from API working.
+* [3:04pm] -- Rearchitect without Redux. Redux is overkill for this project. Just getting the data to pass from MongoDB local database through Express to App.jsx in the front end.
