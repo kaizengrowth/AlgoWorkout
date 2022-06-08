@@ -1,7 +1,7 @@
 import React from 'react';
 import LabeledText from './LabeledText.jsx';
 
-const TotalsDisplay = () => (
+const Metrics = () => (
   <div className="innerbox" id="totals">
     <h3>Totals Display</h3>
     <div>
@@ -11,4 +11,4 @@ const TotalsDisplay = () => (
     <button id='sync' className="secondary">Action</button>
   </div>
 );
-export default TotalsDisplay;
+export default Metrics;

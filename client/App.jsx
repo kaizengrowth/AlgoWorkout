@@ -19,9 +19,8 @@ class App extends React.Component {
   
   render() {
     return (<div id="app">
-      App
       {this.state.questions}
-      {/* < MainContainer questions={this.state.questions} /> */}
+      < MainContainer questions={this.state.questions} />
     </div>)
   }
 }  

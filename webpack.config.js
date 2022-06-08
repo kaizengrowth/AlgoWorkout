@@ -9,7 +9,7 @@ module.exports = {
         filename: 'bundle.js',
     },
     plugins: [
-        new HtmlWebpackPlugin({template: 'index.html'}),
+        new HtmlWebpackPlugin({template: path.resolve(__dirname, './index.html')}),
     ],
     module: {
         rules: [
@@ -35,7 +35,7 @@ module.exports = {
     },
     devServer: {
         static: {
-          directory: path.resolve(__dirname, 'build'),
+          directory: path.resolve(__dirname),
           publicPath: '/'
         },
         port: 8888,
