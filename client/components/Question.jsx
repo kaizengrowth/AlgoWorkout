@@ -1,11 +1,12 @@
 import React from 'react';
 import LabeledText from './LabeledText.jsx';
 
-const Question = () => (
+const Question = (props) => (
   <div className="assetBox">
     <h3>Question</h3>
     <div>
       <LabeledText label="Prop 1" text='text' />
+      <h4>{props.name}</h4>
       <LabeledText label="Prop 2" text='text' />
       <LabeledText label="Prop 3" text='text' />
     </div>

@@ -22,7 +22,7 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
 * [x] Test GET routes for database in Postman
 * [x] Set up server.js & algoController to GET a problem.
 * [x] Call backend API from App.jsx, and save data into state.
-* [ ] Display question in question container in the front end, <del>with</del> without Redux
+* [x] Display question in question container in the front end, <del>with</del> without Redux
 
 <del>* [ ] Multiple steps: Figure out Redux actions / dispatch / reducer for getting a problem... </del>
 
@@ -56,3 +56,4 @@ Now back to problem of displaying data in React components.
 * [3:04pm] -- Rearchitect without Redux. Redux is overkill for this project. Just getting the data to pass from MongoDB local database through Express to App.jsx in the front end.
 * [3:51pm] -- Nurbek saves the day. Realized I didn't configure a proxy in webpack-dev-server, which is why it wouldn't load properly.
 * [5:13pm] -- Props drilled down to QuestionsContainer component. Reorganized three main containers in App.js to be: Metrics Container, Questions Container, Main Container (Kanban). Now finally: the Questions component.
+* [6:33pm] -- Finally got the questions to display! Task 1 finished.
