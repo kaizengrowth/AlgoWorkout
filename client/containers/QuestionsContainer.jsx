@@ -16,7 +16,7 @@
     return (
       <div className="questionsContainer">
         <div className="innerbox">
-          <h3>Problems</h3>
+          <h3>Today's Questions</h3>
           <div>
             {JSON.stringify(todaysQuestions)}
         

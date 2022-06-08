@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import MainContainer from './containers/MainContainer.jsx'
+import MainContainer from './containers/MainContainer.jsx';
+import QuestionsContainer from './containers/QuestionsContainer.jsx';
+import MetricsContainer from './containers/MetricsContainer.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +23,8 @@ class App extends React.Component {
     console.log('App.jsx', this.state.questions)
     return (
       <div id="app">
-        {JSON.stringify(this.state.questions)}
+        {this.state.questions &&  < MetricsContainer questions={this.state.questions} />}
+        {this.state.questions &&  < QuestionsContainer questions={this.state.questions} />}
         {this.state.questions &&  < MainContainer questions={this.state.questions} />}
       </div>
     )
