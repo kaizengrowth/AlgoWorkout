@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon server/server.js",
-    "build": "NODE_ENV=development webpack -w",
+    "build": "NODE_ENV=production webpack -w",
     "test": "jest --verbose",
     "dev": "concurrently \"NODE_ENV=development webpack-dev-server --open --hot --progress --color \" \"nodemon ./server/server.js\""
   },

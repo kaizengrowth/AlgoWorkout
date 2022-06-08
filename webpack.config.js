@@ -38,6 +38,9 @@ module.exports = {
           directory: path.resolve(__dirname),
           publicPath: '/'
         },
+        proxy: { 
+            '/api': 'http://localhost:3000'
+        },
         port: 8888,
         compress: true,
         hot: true,

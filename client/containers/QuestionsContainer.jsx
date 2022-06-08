@@ -1,9 +1,6 @@
  import React from 'react';
  import QuestionCreator from '../components/QuestionCreator.jsx';
  import QuestionsDisplay from '../components/QuestionsDisplay.jsx';
- import { connect } from 'react-redux';
- import { bindActionCreators } from 'redux';
- import * as actions from '../actions/actions.js';
 
  const url = 'http://localhost:8888/api/';
 

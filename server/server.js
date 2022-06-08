@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-const PORT = 8888;
+const PORT = 3000;
 
 // parsing request body
 app.use(express.json());

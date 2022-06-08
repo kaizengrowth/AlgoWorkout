@@ -54,3 +54,4 @@ Now back to problem of displaying data in React components.
 
 * [11:44am] -- Display cards in front end React. Fetch from API working.
 * [3:04pm] -- Rearchitect without Redux. Redux is overkill for this project. Just getting the data to pass from MongoDB local database through Express to App.jsx in the front end.
+* [3:51pm] -- Nurbek saves the day. Realized I didn't configure a proxy in webpack-dev-server, which is why it wouldn't load properly.

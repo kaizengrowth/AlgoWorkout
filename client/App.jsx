@@ -8,7 +8,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:8888/api/")
+    fetch("http://localhost:3000/api/")
       .then((data) => data.json())
       .then((data) => this.setState({
         questions: JSON.stringify(data)

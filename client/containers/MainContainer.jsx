@@ -1,8 +1,6 @@
 import React from 'react';
 import Metrics from '../components/Metrics.jsx';
 import QuestionsContainer from './QuestionsContainer.jsx';
-//import * as actions from '../actions/actions.js';
-//import { connect } from 'react-redux';
  
  const MainContainer = (props) => (
    <div className="mainContainer">
