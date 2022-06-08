@@ -23,11 +23,11 @@ client.connect(err => {
 //     dbName: 'algos'
 // })
 //     .then(() => console.log('Connected to Mongo DB.'))
-//     .catch(err => console.log(err));s
+//     .catch(err => console.log(err));
 
 // db = mongoose.connection
 // db.once('open', _ => {
-//     console.log('Database connected:', url)
+//     console.log('Database connected:', MONGO_URI)
 //   })
   
 //   db.on('error', err => {
@@ -71,17 +71,15 @@ const algoSchema = new Schema({
     name: String,
     link: String,
     level: String,
-    description: String,
     patterns: [String],
-    topics: [String],
-    companies: [String],
     dates: [Date],
     kanban: String,
     score: Number,
+    time: Number,
     confidence: Number,
     notes: String
 })
 
-const algoModel = mongoose.model('algoModel', algoSchema );
+const algoModel = mongoose.model('questions', algoSchema );
 
 module.exports = algoModel;

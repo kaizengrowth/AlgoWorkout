@@ -1,16 +1,17 @@
-const db = require ('../models/assetModels.js')
+const algoModel = require ('../models/algoModels.js')
 
 const algoController = {};
 
-// algoController.getTables = (req, res, next) => {
-//     console.log('at getTables controller');
-    
-//     })
-//       .then(() =>{
-        
-//         return next();
-//       })
-//       .catch((error) => {console.log(error);});
-//   };
+algoController.getQuestions = (req, res, next) => {
+    console.log('at getQuestions controller');
+    algoModel.find({}).exec().then(data => {
+        console.log(data);
+        res.locals.questions = data;
+        next();
+    }).catch(err => {
+        next(err);
+    })
+}
+
 
 module.exports = algoController;

@@ -14,16 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 // static files
 app.use(express.static(path.resolve(__dirname, '../')));
 
-// apiRouter
-// const apiRouter = require(path.join(__dirname, 'routes/api.js'));
-// app.use('/api', apiRouter);
-
-// catch-all route handler
-app.all('*', (req, res) => {
-  console.log('Page not found');
-  return res.status(404).send('Page not found.')
-});
-
 // MongoDB connection
 const MONGO_URI = 'mongodb://127.0.0.1:27017/algos';
 
@@ -43,6 +33,16 @@ db.once('open', _ => {
 db.on('error', err => {
   console.error('connection error:', err)
 })
+
+// apiRouter
+// const apiRouter = require(path.join(__dirname, 'routes/api.js'));
+app.use('/api', apiRouter);
+
+// catch-all route handler
+app.all('*', (req, res) => {
+  console.log('Page not found');
+  return res.status(404).send('Page not found.')
+});
 
 // global error handler
 app.use((err, req, res, next) => {

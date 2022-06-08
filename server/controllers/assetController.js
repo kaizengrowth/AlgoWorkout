@@ -1,4 +1,4 @@
-const db = require  ('../models/assetModels.js')
+const db = require  ('../models/algoModels.js')
 
 const assetController = {};
 
