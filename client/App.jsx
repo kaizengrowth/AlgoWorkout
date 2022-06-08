@@ -11,17 +11,18 @@ class App extends React.Component {
     fetch("http://localhost:8888/api")
       .then((data) => data.json())
       .then((data) => this.setState({
-        questions: JSON.stringify(data)
+        questions: data
       }))
       .catch((err) => console.log(err) 
     )
   }
   
   render() {
+    console.log('App.jsx', this.state.questions)
     return (
       <div id="app">
-        {this.state.questions}
-        < MainContainer questions={this.state.questions} />
+        {JSON.stringify(this.state.questions)}
+        {this.state.questions &&  < MainContainer questions={this.state.questions} />}
       </div>
     )
   }

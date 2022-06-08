@@ -10,27 +10,22 @@
   }
 
   render() {
-    console.log('this.props.questions: ' + this.props.questions);
-    let todaysQuestions = ['123', '213'];
-    console.log('length: ' + this.props.questions.length);
-    for (let question of this.props.questions) {
-      console.log('name:' + question['name']);
-      // todaysQuestions.push(this.props.questions[i]["name"]);
-    }
+  
+    const todaysQuestions = this.props.questions.map(q => q.name);
+  
     return (
       <div className="questionsContainer">
         <div className="innerbox">
           <h3>Problems</h3>
           <div>
-            {todaysQuestions}
-            Question 1
-            Question 2
+            {JSON.stringify(todaysQuestions)}
+        
             {/* <QuestionCreator/>
             <QuestionsDisplay/> */}
           </div>
         </div>
       </div>
-    )
+    );
   };
  
 }
