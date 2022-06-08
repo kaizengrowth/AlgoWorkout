@@ -5,11 +5,9 @@
  //import { bindActionCreators } from 'redux';
  //import * as actions from '../actions/actions.js';
  
-
-
  const AssetsContainer = () => (
    <div className="innerbox">
-     <h3>Assets Container</h3>
+     <h3>Problems</h3>
      <div>
       <AssetCreator/>
       <AssetsDisplay/>

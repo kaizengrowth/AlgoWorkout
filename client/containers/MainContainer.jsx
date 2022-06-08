@@ -8,7 +8,7 @@ import AssetsContainer from './AssetsContainer.jsx';
  
  const MainContainer = () => (
    <div className="mainContainer">
-     <h2>Main Container</h2>
+     <h2>Today's Questions</h2>
      <div className="outerBox">
        <TotalsDisplay />
        <AssetsContainer />
