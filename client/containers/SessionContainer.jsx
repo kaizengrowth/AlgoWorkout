@@ -2,17 +2,17 @@ import React, {Component} from 'react';
 import '../scss/_modal.scss';
 import { nanoid } from 'nanoid';
  
-const SessionContainer = ({handleClose, show, name, id}) => {
+const SessionContainer = ({name, link, show, handleClose, questionID, userID}) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
 
-    console.log('id ' + id);
+    console.log('id ' + questionID);
 
-const handleStart = async (id) => {
-    console.log('handleStart: ' + id);
+const handleStart = async (questionID, userID) => {
+    console.log('handleStart: ' + questionID);
     const createSession = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json'},
-        body: JSON.stringify({questionID: id, userID: "1"})
+        body: JSON.stringify({questionID: questionID, userID: userID})
     };
 
     try { 
@@ -29,7 +29,7 @@ const handleStart = async (id) => {
             <section className = 'modal-main'>
                 <h1>{name}</h1>
                 <img id='pomodoro' src="../docs/timer.gif"/>
-                <button class='button1' onClick={handleStart(id)}>
+                <button class='button1' onClick={handleStart(questionID, userID)}>
                     Start
                 </button>
                 <br/>

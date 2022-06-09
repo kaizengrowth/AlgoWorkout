@@ -1,6 +1,10 @@
 import React from 'react';
 import LabeledText from './LabeledText.jsx';
 
+// const startTimer = (props) => {
+//   props.showModal(props.name, props.questionID);
+// }
+
 const Question = (props) => (
   <div className="assetBox">
     <h3>{props.name}</h3>
@@ -15,9 +19,7 @@ const Question = (props) => (
       {console.log(props.showModal)}
       <button 
         className='button1' 
-        onClick={(e) => {
-          props.showModal(props.name, props.questionID); 
-        }}> Work On It! 💪 </button>
+        onClick={e => {props.showModal(props.name, props.questionID)}}> Work On It! 💪 </button>
     </div>
   </div>
 );

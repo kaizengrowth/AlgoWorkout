@@ -1,5 +1,4 @@
 const sessionModel = require ('../models/sessionModels.js')
-
 const sessionController = {};
 
 // get all questions
@@ -33,8 +32,16 @@ sessionController.createSession = (req, res, next) => {
     // let timeNow = new Date().getTime();
     const {userID, questionID} = req.body;
     console.log('questionID: ' + questionID);
+    console.log('req.body: ' + JSON.stringify(req.body));
+    // let session = new Session({
+    //     'userID': req.body.userID,
+    //     'questionID': req.body.questionID
+    // })
+    // sessionModel.save(session)
+
     sessionModel.create({userID, questionID})
     .then(data => {
+        console.log('data: ' + data);
         res.locals.session = data;
         next();
     })

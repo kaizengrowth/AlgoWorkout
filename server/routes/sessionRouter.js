@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const sessionRouter = express.Router();
 const sessionController = require('../controllers/sessionController.js');
+const sessionModel = require('../models/sessionModels');
 
 sessionRouter.get('/', sessionController.getAllSessions, (req, res) => {
     console.log('getting all sessions');
@@ -16,8 +17,17 @@ sessionRouter.get('/', sessionController.getAllSessions, (req, res) => {
 
 // create a session
 sessionRouter.post('/', sessionController.createSession, (req, res) => {
-    console.log(`create session:` + req.body);
-    return res.status(200).json(res.locals.session);
+    console.log(`create session:` + JSON.stringify(res.locals.session));
+    
+    let session = new sessionModel({
+        'userID': req.body.userID,
+        'questionID': req.body.questionID
+    })
+    
+    session.save(function(err, session) {
+        if (err) { return next(err) }
+        res.status(200).json(res.locals.session);
+    })
 });
 
 // update questions

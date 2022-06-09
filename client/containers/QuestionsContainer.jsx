@@ -48,7 +48,6 @@
           <h3>Today's Questions</h3>
 
         <SessionContainer 
-          id={this.state.questionID} 
           name={this.state.modalName}
           link={this.state.modalName}  
           show={this.state.modalShow} 
