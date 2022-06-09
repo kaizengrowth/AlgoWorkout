@@ -1,7 +1,5 @@
 import React from 'react';
 import QuestionCreator from '../components/QuestionCreator.jsx';
- 
-
 class MainContainer extends React.Component {
 
   constructor(props) {

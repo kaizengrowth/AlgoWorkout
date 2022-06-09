@@ -133,3 +133,4 @@ sessions in the user document, rather than a separate session document.
 First: write express route for find one question by ID.
 * [7:49pm] Gave a rough try to GetQuestionByName ... FindOne()
 * [9:39pm] Display modal (for creating a session). Figured out stupid bug with button that won't click because of webpack double import: https://stackoverflow.com/questions/67099424/react-onclick-not-working-in-any-components After removing the build script from index.html, now the button works in a basic way.
+* [10:05pm] Working modal with pomodoro image!

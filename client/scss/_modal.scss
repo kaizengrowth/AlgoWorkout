@@ -9,11 +9,13 @@
   
   .modal-main {
     position:fixed;
-    background: #A5E9E8;
+    background: white;
     width: 80%;
     height: auto;
     top:50%;
     left:50%;
+    border-radius: 15px;
+    padding: 5px;
     transform: translate(-50%,-50%);
   }
   
