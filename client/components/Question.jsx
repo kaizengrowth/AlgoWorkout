@@ -12,7 +12,7 @@ const Question = (props) => (
     </div>
     <div className="flex">
       {console.log(props.showModal)}
-      <button type="button" className='showModal' onClick={(e) => {e.preventDefault; props.showModal()}}>Work on it! 💪</button>
+      <button type="button" className='showModal' onClick={(e) => {e.preventDefault; props.showModal(props.name)}}>Work on it! 💪</button>
       {/* <button className='action2'>Solved! 🙌</button> */}
     </div>
   </div>

@@ -7,15 +7,19 @@
   constructor(props) {
     super(props);
     this.state = {
-      modalShow: false
+      modalShow: false,
+      modalName: ''
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
   }
 
-  showModal = () => {
+  showModal = (name) => {
     console.log('show modal 123');
-    this.setState({modalShow: true});
+    this.setState({
+      modalShow: true,
+      modalName: name
+    });
   }
 
   hideModal = () => {
@@ -41,7 +45,7 @@
         <div className="innerbox">
           <h3>Today's Questions</h3>
 
-        <SessionContainer show={this.state.modalShow} handleClose={this.hideModal}>Session</SessionContainer>
+        <SessionContainer name={this.state.modalName} show={this.state.modalShow} handleClose={this.hideModal}>Session</SessionContainer>
           <div>
             {console.log(todaysQuestions)}
             {todaysQuestions}
