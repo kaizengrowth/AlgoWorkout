@@ -10,10 +10,11 @@ sessionRouter.get('/', sessionController.getAllSessions, (req, res) => {
 });
 
 // get session by ID
-// router.get('/:id', sessionController.getSessionById, (req, res) => {
-//     console.log(`get question by name: ${req.params.name}`);
-//     return res.status(200).json(res.locals); // res.locals?
-// });
+sessionRouter.get('/:questionID', sessionController.getSessionById, (req, res) => {
+    console.log(`get question by questionID: ${req.params.questionID}`);
+    console.log(`found session: ${res.locals.session}`);
+    return res.status(200).json(res.locals.session);
+});
 
 // create a session
 sessionRouter.post('/', sessionController.createSession, (req, res) => {
@@ -22,9 +23,9 @@ sessionRouter.post('/', sessionController.createSession, (req, res) => {
     res.status(200).json(res.locals.session);
 });
 
-// update questions
-// router.get('/', algoController.updateQuestions, (req, res) => {
-//     return res.status(200).json(res.locals.questions);
-// });
+// update a session 
+sessionRouter.patch('/:questionID', sessionController.updateSession, (req, res) => {
+    // return res.status(200).json(res.locals.questions);
+});
 
 module.exports = sessionRouter;

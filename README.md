@@ -103,12 +103,13 @@ sessions in the user document, rather than a separate session document.
 
 ## Next Tasks
 <ol>
-    <li> Session modal &timer </li>
-    <li> CRUD functionality for questions: Create, Update, Delete </li>
-    <li> Metrics container: totals display </li>
-    <li> Question picker functionality </li>
-    <li> Main container: 4 kanban sections </li>
-    <li> User login/registration </li>
+    <li> [x] Session modal &timer </li>
+    <li> [ ] CRUD functionality for questions: Create, Update (Delete?) </li>
+    <li> [ ] Instead of deleting question, move it to main container kanban? </li>
+    <li> [ ] Metrics container: totals display </li>
+    <li> [ ] Question picker functionality </li>
+    <li> [ ] Main container: 4 kanban sections </li>
+    <li> [ ] User login/registration </li>
 </ol>
 
 ## Task 2. CRUD Functionality for questions: Create, Update, Delete
@@ -118,19 +119,24 @@ sessions in the user document, rather than a separate session document.
 
 * [ ] Session schema & endpoints:
     * [x] Create session schema
-    * [ ] Create session
+    * [x] Create session
+    * [ ] Find session by questionID
     * [ ] Update session
-    * [ ] Read session?
-    * [ ] Delete session?
 
-* [ ] Create routes/API endpoints for:
+* [ ] Display timer:
+    * [ ] Show start time in modal.
+    * [ ] Show end time in modal.
+    
+
+<del> * [ ] Create routes/API endpoints for:
     * [ ] Find one question by ID 
     * [ ] Create question
     * [ ] Update question
 
 *  [ ] Create forms for: 
     * [ ] Create question form
-    * [ ] Update question form
+    * [ ] Update question form </del>
+
 
 ================================================================
 
@@ -157,6 +163,10 @@ I've re-wrote this method and took it apart to try to understand why this error 
 * [9:39am] Finally realized that the values are actually updating correctly in the MongoDB database, but simply requires multiple page clicks to get to the end of over 1700+ session documents. Had just put up a help desk ticket on Slack, lol. Well, onto the next problem! 
 
 Will load some basic data into my database so that it is more useful for the demo.
+
+* [11:54am] Moving forward: continuing with update functionality for session. 
+
+
 
 ================================================================
 

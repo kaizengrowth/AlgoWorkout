@@ -1,3 +1,5 @@
+@import '_variables';
+
 .modal {
     position: fixed;
     top: 0;
@@ -20,6 +22,10 @@
     transform: translate(-50%,-50%);
   }
   
+  .modal-main h3 {
+      color: $primary;
+  }
+
   .display-block {
     display: block;
   }

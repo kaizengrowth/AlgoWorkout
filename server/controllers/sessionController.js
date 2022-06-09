@@ -15,29 +15,20 @@ sessionController.getAllSessions = (req, res, next) => {
 
 // get question by ID -- probably does not work! [rough try]
 sessionController.getSessionById = (req, res, next) => {
-    console.log('at getSessionsByID controller');
-    sesionModel.findOne({req}).exec().then(data => {
-        console.log(data);
+    sessionModel.findOne({'questionID': req.body.questionID}).exec().then(data => {
         res.locals.session = data;
         next();
     }).catch(err => {
         next(err);
     })
-}
+};
 
 // create a session
 sessionController.createSession = (req, res, next) => {
     console.log('creating session');
-    // const Session = mongoose.model('session', sessionSchema);
-    // let timeNow = new Date().getTime();
     const {userID, questionID} = req.body;
     console.log('questionID: ' + questionID);
     console.log('req.body: ' + JSON.stringify(req.body));
-    // let session = new Session({
-    //     'userID': req.body.userID,
-    //     'questionID': req.body.questionID
-    // })
-    // sessionModel.save(session)
 
     sessionModel.create({userID, questionID})
     .then(data => {
@@ -46,6 +37,18 @@ sessionController.createSession = (req, res, next) => {
         next();
     })
     .catch((err) => next(err));
+}
+
+// update a session
+sessionController.updateSession = (req, res, next) => {
+    console.log('req.body.questionID: ' + req.body.questionID);
+    let query = {'questionID': req.body.questionID};
+    req.newData.questionID = req.body.questionID;
+
+    sessionModel.findOneAndUpdate(query, req.newData, function(err, doc) {
+        if (err) return res.send(500, {error: err});
+        return res.send('Successfully updated');
+    });
 }
 
 module.exports = sessionController;

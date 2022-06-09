@@ -11,8 +11,13 @@
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); 
   }
 
+  h1 {
+    margin-left: 20px; 
+  }
+
   h2 {
     color: white;
+    margin-left: 20px;
   }
 
   h3 {
@@ -99,6 +104,7 @@
     text-align: center;
     letter-spacing: .2em;
     margin-bottom: $p1;
+    margin-left: $p1 important;
   }
   
   #totals {
@@ -133,7 +139,7 @@
     background-color: $primary;
     color: white;
     box-shadow: 0 0 1px rgb(0 0 0 / 0%);
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
     cursor: grabbing;
   }
 
@@ -149,6 +155,7 @@
     margin-top: -15px;
     margin-right: -15px;
     font-size: 15px;
+    border: $tertiary 1px solid;
   }
 
   .button2:hover {
