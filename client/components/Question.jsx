@@ -3,15 +3,16 @@ import LabeledText from './LabeledText.jsx';
 
 const Question = (props) => (
   <div className="assetBox">
-    <h3>Question</h3>
+    <h3>{props.name}</h3>
     <div>
-      <LabeledText label="Prop 1" text='text' />
-      <h4>{props.name}</h4>
-      <LabeledText label="Prop 2" text='text' />
-      <LabeledText label="Prop 3" text='text' />
+      <br></br>
+      <LabeledText label="Patterns" text={props.patterns}/>
+      <LabeledText label="Dates" text={props.dates} />
+      <LabeledText label="Link" text={props.link} />
     </div>
     <div className="flex">
-      <button type="button" className='showModal' onClick={(e) => {alert(e.target.value)}}>Work on it! 💪</button>
+      {console.log(props.showModal)}
+      <button type="button" className='showModal' onClick={(e) => {e.preventDefault; props.showModal()}}>Work on it! 💪</button>
       {/* <button className='action2'>Solved! 🙌</button> */}
     </div>
   </div>

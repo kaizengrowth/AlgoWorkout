@@ -65,17 +65,22 @@
   #totals {
     line-height: 1.5em;
   }
+
+  #pomodoro {
+    width: 300px;
+  }
   
   input {
     margin: $p1;
   }
   
   button {
+    background-color: $secondary;
     min-width: 4em;
     padding: 0.4em 1em;
     margin: 3px;
     border: 1px solid #ccc;
-    border-radius: 2px;
+    border-radius: 8px;
     // &:disabled {
     //   background-color: #eee;
     //   color: #777;

@@ -14,7 +14,7 @@
   }
 
   showModal = () => {
-    console.log('show modal');
+    console.log('show modal 123');
     this.setState({modalShow: true});
   }
 
@@ -23,7 +23,6 @@
   }
 
   render() {
-    // console.log('showmodal!!!', this.showModal);
 
     const todaysQuestions = this.props.questions.map((q, i) => {
           console.log('qname: ' + q.name);
@@ -42,9 +41,7 @@
         <div className="innerbox">
           <h3>Today's Questions</h3>
 
-          <SessionContainer/>
-
-          {/* <SessionContainer show={this.state.modalShow} handleClose={this.hideModal}>Session</SessionContainer> */}
+        <SessionContainer show={this.state.modalShow} handleClose={this.hideModal}>Session</SessionContainer>
           <div>
             {console.log(todaysQuestions)}
             {todaysQuestions}
