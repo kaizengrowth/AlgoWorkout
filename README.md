@@ -15,6 +15,8 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
     * [x] server/models/algoModels --> Schema for an algo problem
     * [x] created [wireframes for dashboard & data models](/docs/wireframe_june7.png) using ExCaliber
 
+
+================================================================
 ## Task 1. AlgoModel / Controller / Component
 * [x] Put 3 dummy problems in MongoDB database. 
 * [x] Enable DataAPI in MongoDB database through Atlas UI: "read and write."
@@ -26,7 +28,7 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
 
 <del>* [ ] Multiple steps: Figure out Redux actions / dispatch / reducer for getting a problem... </del>
 
-## Log
+## Log 1
 ### Tue. 6/7/22 
 * [1:53pm] -- Finished initial setup for app: webpack, Node/Express, React/Redux, MongoDB
 * [3:47pm] -- Created [wireframe](/docs/wireframe_june7.png) in Excaliber, and roughly planned out database schema and React components
@@ -58,27 +60,7 @@ Now back to problem of displaying data in React components.
 * [5:13pm] -- Props drilled down to QuestionsContainer component. Reorganized three main containers in App.js to be: Metrics Container, Questions Container, Main Container (Kanban). Now finally: the Questions component.
 * [6:33pm] -- Finally got the questions to display! Task 1 finished. Now decide on next tasks and prioritize, scope given limited time.
 
-
-## Next Tasks
-<ol>
-    <li> CRUD functionality for questions: Create, Update, Delete </li>
-    <li> Metrics container: totals display </li>
-    <li> Question picker functionality </li>
-    <li> Session timer </li>
-    <li> Main container: 4 kanban sections </li>
-    <li> User login/registration </li>
-</ol>
-
-## Task 2. CRUD Functionality for questions: Create, Update, Delete
-* [ ] Create routes/API endpoints for:
-    * [ ] Find one question by ID 
-    * [ ] Create question
-    * [ ] Update question
-
-*  [ ] Create forms for: 
-    * [ ] Create question form
-    * [ ] Update question form
-
+================================================================
 ### Brainstorm
 
 __1. Pause and think: Do users need to be able to create/update questions or delete questions?__
@@ -116,3 +98,37 @@ sessions in the user document, rather than a separate session document.
         --> Easy/Med/Hard have different points.
         --> Mastering a pattern earns a certain number of points.
         --> Number of consecutive sessions earns a certain number of points. (adv. feature)
+
+================================================================
+
+## Next Tasks
+<ol>
+    <li> CRUD functionality for questions: Create, Update, Delete </li>
+    <li> Session timer </li>
+    <li> Metrics container: totals display </li>
+    <li> Question picker functionality </li>
+    <li> Main container: 4 kanban sections </li>
+    <li> User login/registration </li>
+</ol>
+
+## Task 2. CRUD Functionality for questions: Create, Update, Delete
+* [ ] Create routes/API endpoints for:
+    * [ ] Find one question by ID 
+    * [ ] Create question
+    * [ ] Update question
+
+*  [ ] Create forms for: 
+    * [ ] Create question form
+    * [ ] Update question form
+
+* [ ] Session endpoints:
+    * [ ] Create session
+    * [ ] Delete session
+
+================================================================
+
+## Log 2
+### Wed. 6/8/22
+* [7:10pm] Ready to tackle Task 2, and meet the basic requirements of the assignment.
+First: write express route for find one question by ID.
+* [7:49pm] Gave a rough try to GetQuestionByName ... FindOne()

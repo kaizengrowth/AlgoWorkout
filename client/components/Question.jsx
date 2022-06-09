@@ -12,7 +12,7 @@ const Question = (props) => (
     </div>
     <div className="flex">
       <button className='action1'>Work on it! 💪</button>
-      <button className='action2'>Solved! 🙌</button>
+      {/* <button className='action2'>Solved! 🙌</button> */}
     </div>
   </div>
 );

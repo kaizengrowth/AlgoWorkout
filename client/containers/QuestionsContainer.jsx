@@ -1,5 +1,4 @@
  import React, { Component } from 'react';
- import QuestionCreator from '../components/QuestionCreator.jsx';
  import Question from '../components/Question.jsx';
 
 
@@ -27,7 +26,6 @@
         <div className="innerbox">
           <h3>Today's Questions</h3>
           <div>
-            <QuestionCreator/>
             {console.log(todaysQuestions)}
             {todaysQuestions}
           </div>

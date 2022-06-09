@@ -1,6 +1,5 @@
 import React from 'react';
-import Metrics from '../components/Metrics.jsx';
-import QuestionsContainer from './QuestionsContainer.jsx';
+import QuestionCreator from '../components/QuestionCreator.jsx';
  
 
 class MainContainer extends React.Component {
@@ -15,6 +14,7 @@ class MainContainer extends React.Component {
         <h2>All Questions</h2>
         <div className="outerBox">
           {/* <QuestionsContainer questions={this.props.questions}/> */}
+          <QuestionCreator/>
         </div>
       </div>
     )
