@@ -7,7 +7,7 @@ const algoSchema = new Schema({
     name: String,
     link: String,
     level: String,
-    patterns: [String]
+    pattern: String
 });
 
 const algoModel = mongoose.model('questions', algoSchema );

@@ -120,8 +120,8 @@ sessions in the user document, rather than a separate session document.
     * [x] Create session schema
     * [ ] Create session
     * [ ] Update session
-    * [ ] Read session
-    * [ ] Delete session
+    * [ ] Read session?
+    * [ ] Delete session?
 
 * [ ] Create routes/API endpoints for:
     * [ ] Find one question by ID 
@@ -153,6 +153,10 @@ Uncaught Error: Expected `onClick` listener to be a function, instead got a valu
 ```
 
 I've re-wrote this method and took it apart to try to understand why this error might be happening, but it seems like I am passing a function, not an object. What is this error referrring to? 
+
+* [9:39am] Finally realized that the values are actually updating correctly in the MongoDB database, but simply requires multiple page clicks to get to the end of over 1700+ session documents. Had just put up a help desk ticket on Slack, lol. Well, onto the next problem! 
+
+Will load some basic data into my database so that it is more useful for the demo.
 
 ================================================================
 

@@ -33,7 +33,7 @@
           console.log('qname: ' + q.name);
           return <Question 
             key={nanoid()} 
-            questionID = {i}
+            questionID = {i.toString()}
             userID = "1"
             name={q.name} 
             link={q.link} 

@@ -29,7 +29,7 @@ const handleStart = async (questionID, userID) => {
             <section className = 'modal-main'>
                 <h1>{name}</h1>
                 <img id='pomodoro' src="../docs/timer.gif"/>
-                <button class='button1' onClick={handleStart(questionID, userID)}>
+                <button class='button1' onClick={e => handleStart(questionID, userID)}>
                     Start
                 </button>
                 <br/>
