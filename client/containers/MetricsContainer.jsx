@@ -9,11 +9,11 @@ class MetricsContainer extends React.Component {
 
   render() {
     return (
-      <div className="mainContainer">
+      <div className="metricsContainer">
         <h2>Metrics</h2>
-        <div className="outerBox">
+        <div className="outerBox" id="metrics">
           {/* <QuestionsContainer questions={this.props.questions}/> */}
-          Total Time: 
+          <p id='scores'>Total Time: </p>
           {/* // Score: 
           // Easy + Med + Hard */}
         </div>

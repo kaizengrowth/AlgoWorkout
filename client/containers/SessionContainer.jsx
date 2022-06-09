@@ -27,7 +27,7 @@ const handleStart = async (questionID, userID) => {
     return(
         <div className = {showHideClassName}>
             <section className = 'modal-main'>
-                <h1>{name}</h1>
+                <center><h3>{name}</h3>
                 <img id='pomodoro' src="../docs/timer.gif"/>
                 <button class='button1' onClick={e => handleStart(questionID, userID)}>
                     Start
@@ -35,7 +35,7 @@ const handleStart = async (questionID, userID) => {
                 <br/>
                 <button onClick={handleClose}>
                     Complete! 🙌 
-                </button>
+                </button></center>
             </section>
         </div>
     );

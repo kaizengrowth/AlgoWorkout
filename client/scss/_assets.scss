@@ -7,7 +7,7 @@
   }
   
   body {
-    padding-top: 4em;
+    padding-top: 2em;
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); 
   }
 
@@ -16,7 +16,25 @@
   }
 
   h3 {
-    color: rgb(71, 66, 66);
+    color: $gray3;
+  }
+
+  #label {
+    color: $gray2;
+  }
+
+  #property {
+    color: $gray2;
+    font-weight: lighter;
+    line-height: 3em;
+  }
+ 
+  #questionLink {
+    color: $primary;
+  }
+
+  #scores {
+    font-size: small;
   }
   
   .outerBox {
@@ -45,6 +63,14 @@
     border-radius: 5px;
     background-color: $lightGray;
   }
+
+  #metrics {
+  // background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+    background-color: rgb(163, 200, 213);
+    box-shadow: none;
+    border-radius: 0px;
+    border: none;
+  }
   
   .allAssets {
     display: grid;
@@ -54,8 +80,9 @@
   .primary { background-color: $primary; }
   .secondary { background-color: $secondary; }
   
-  .assetBox {
+  .questionBox {
     padding: $p0;
+    padding-right: 25px;
     margin: $p0;
     font-size: .8em;
     border: $lightBorder;
@@ -120,6 +147,7 @@
     background-color: transparent;
     float: right;
     margin-top: -15px;
+    margin-right: -15px;
     font-size: 15px;
   }
 

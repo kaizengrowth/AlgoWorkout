@@ -6,14 +6,14 @@ import LabeledText from './LabeledText.jsx';
 // }
 
 const Question = (props) => (
-  <div className="assetBox">
-    <h3>{props.name}</h3>
+  <div className="questionBox">
+    <a href={props.link}><h3 id='questionLink'>{props.name}</h3></a>
     <button className='button2'></button> 
     <div>
       <br></br>
-      <LabeledText label="Level" text={props.level} />
-      <LabeledText label="Patterns" text={props.patterns}/>
-      <LabeledText label="Link" text={props.link} />
+      <h4 id='label'> Level: <span id='property'>{props.level}</span></h4> 
+      <LabeledText label="Pattern" text={props.pattern}/>
+      <LabeledText label="Companies" text={props.companies} />
     </div>
     <div className="flex">
       {console.log(props.showModal)}

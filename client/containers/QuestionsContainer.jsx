@@ -37,7 +37,11 @@
             userID = "1"
             name={q.name} 
             link={q.link} 
-            patterns={q.patterns}
+            level={q.level}
+            pattern={q.pattern}
+            resources={q.resources} 
+            companies={q.companies}
+            description={q.description}
             showModal={this.showModal}
           />
     });

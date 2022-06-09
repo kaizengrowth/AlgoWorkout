@@ -20,18 +20,6 @@ sessionRouter.post('/', sessionController.createSession, (req, res) => {
     console.log(`create session:` + JSON.stringify(res.locals.session));
 
     res.status(200).json(res.locals.session);
-    
-    // let session = new sessionModel({
-    //     'userID': req.body.userID,
-    //     'questionID': req.body.questionID
-    // })
-
-    // console.log('session to post: ' + session);
-    
-    // session.save(function(err, session) {
-    //     if (err) { return next(err) }
-    //     res.status(200).json(session);
-    // })
 });
 
 // update questions

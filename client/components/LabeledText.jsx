@@ -4,7 +4,7 @@ const LabeledText = ({ label, text }) => (
   <div>
     <div>
       <p>
-        <strong>{`${label}: `}</strong>
+        <span id='label'><strong>{`${label}: `}</strong></span>
         {text}
       </p>
     </div>
