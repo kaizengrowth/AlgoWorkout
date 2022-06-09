@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../scss/_modal.scss';
-import Clock from '../components/Clock.jsx';
  
 const SessionContainer = ({handleClose, show, children, name}) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";

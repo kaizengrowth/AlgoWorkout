@@ -103,8 +103,8 @@ sessions in the user document, rather than a separate session document.
 
 ## Next Tasks
 <ol>
+    <li> Session modal &timer </li>
     <li> CRUD functionality for questions: Create, Update, Delete </li>
-    <li> Session timer </li>
     <li> Metrics container: totals display </li>
     <li> Question picker functionality </li>
     <li> Main container: 4 kanban sections </li>
@@ -112,6 +112,17 @@ sessions in the user document, rather than a separate session document.
 </ol>
 
 ## Task 2. CRUD Functionality for questions: Create, Update, Delete
+* [ ] Create session modal & timer
+    * [x] Functioning modal to log time spent on a question
+    * [x] Spiffy animation
+
+* [ ] Session schema & endpoints:
+    * [ ] Create session schema
+    * [ ] Create session
+    * [ ] Update session
+    * [ ] Read session
+    * [ ] Delete session
+
 * [ ] Create routes/API endpoints for:
     * [ ] Find one question by ID 
     * [ ] Create question
@@ -121,10 +132,6 @@ sessions in the user document, rather than a separate session document.
     * [ ] Create question form
     * [ ] Update question form
 
-* [ ] Session endpoints:
-    * [ ] Create session
-    * [ ] Delete session
-
 ================================================================
 
 ## Log 2
@@ -133,4 +140,16 @@ sessions in the user document, rather than a separate session document.
 First: write express route for find one question by ID.
 * [7:49pm] Gave a rough try to GetQuestionByName ... FindOne()
 * [9:39pm] Display modal (for creating a session). Figured out stupid bug with button that won't click because of webpack double import: https://stackoverflow.com/questions/67099424/react-onclick-not-working-in-any-components After removing the build script from index.html, now the button works in a basic way.
-* [10:05pm] Working modal with pomodoro image!
+* [10:05pm] Working modal with pomodoro image! Easy wins.
+
+
+
+
+
+================================================================
+
+## Footnotes
+
+### Credits:
+Gif Animation "Running out of Time" by Tony Babel
+https://dribbble.com/shots/3205975-Running-out-of-time/attachments/9703363?mode=media

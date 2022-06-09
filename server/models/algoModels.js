@@ -3,16 +3,11 @@ const Schema = mongoose.Schema;
 
 // schema for 'algo'
 const algoSchema = new Schema({
+    id: Number,
     name: String,
     link: String,
     level: String,
-    patterns: [String],
-    dates: [Date],
-    kanban: String,
-    score: Number,
-    time: Number,
-    confidence: Number,
-    notes: String
+    patterns: [String]
 });
 
 const algoModel = mongoose.model('questions', algoSchema );

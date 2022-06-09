@@ -6,8 +6,8 @@ const Question = (props) => (
     <h3>{props.name}</h3>
     <div>
       <br></br>
+      <LabeledText label="Level" text={props.level} />
       <LabeledText label="Patterns" text={props.patterns}/>
-      <LabeledText label="Dates" text={props.dates} />
       <LabeledText label="Link" text={props.link} />
     </div>
     <div className="flex">
