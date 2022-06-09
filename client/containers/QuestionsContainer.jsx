@@ -1,24 +1,26 @@
  import React, { Component } from 'react';
  import Question from '../components/Question.jsx';
  import SessionContainer from './SessionContainer.jsx';
-
-
+ import { nanoid } from 'nanoid';
  class QuestionsContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       modalShow: false,
-      modalName: ''
+      modalName: '',
+      questionID: null,
+      userID: "1"
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
   }
 
-  showModal = (name) => {
-    console.log('show modal 123');
+  showModal = (name, id) => {
+    console.log(`show modal ${id}`);
     this.setState({
       modalShow: true,
-      modalName: name
+      modalName: name,
+      questionID: id,
     });
   }
 
@@ -27,14 +29,14 @@
   }
 
   render() {
-
     const todaysQuestions = this.props.questions.map((q, i) => {
           console.log('qname: ' + q.name);
           return <Question 
-            key={`Question${i}`} 
+            key={nanoid()} 
+            questionID = {i}
+            userID = "1"
             name={q.name} 
             link={q.link} 
-            dates={q.dates}
             patterns={q.patterns}
             showModal={this.showModal}
           />
@@ -45,7 +47,15 @@
         <div className="innerbox">
           <h3>Today's Questions</h3>
 
-        <SessionContainer name={this.state.modalName} show={this.state.modalShow} handleClose={this.hideModal}>Session</SessionContainer>
+        <SessionContainer 
+          id={this.state.questionID} 
+          name={this.state.modalName}
+          link={this.state.modalName}  
+          show={this.state.modalShow} 
+          handleClose={this.hideModal}
+          questionID={this.state.questionID}
+          userID = {this.state.userID}
+        >Session</SessionContainer>
           <div>
             {console.log(todaysQuestions)}
             {todaysQuestions}

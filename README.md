@@ -117,7 +117,7 @@ sessions in the user document, rather than a separate session document.
     * [x] Spiffy animation
 
 * [ ] Session schema & endpoints:
-    * [ ] Create session schema
+    * [x] Create session schema
     * [ ] Create session
     * [ ] Update session
     * [ ] Read session
@@ -153,3 +153,6 @@ First: write express route for find one question by ID.
 ### Credits:
 Gif Animation "Running out of Time" by Tony Babel
 https://dribbble.com/shots/3205975-Running-out-of-time/attachments/9703363?mode=media
+
+### Nice to haves:
+* Card colors changing based on difficulty level

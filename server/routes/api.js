@@ -3,7 +3,6 @@ const path = require('path');
 const router = express.Router();
 const algoController = require('../controllers/algoController.js');
 
-
 router.get('/', algoController.getAllQuestions, (req, res) => {
     console.log('getting all questions');
     return res.status(200).json(res.locals.questions);
@@ -25,5 +24,7 @@ router.post('/', algoController.createQuestion, (req, res) => {
 // router.get('/', algoController.updateQuestions, (req, res) => {
 //     return res.status(200).json(res.locals.questions);
 // });
+
+
 
 module.exports = router;

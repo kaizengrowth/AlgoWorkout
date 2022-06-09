@@ -87,14 +87,15 @@
   }
   
   button {
-    background-color: $secondary;
     color: rgb(80, 75, 75);
     font-weight: bold;
     min-width: 4em;
     padding: 0.4em 1em;
     margin: 3px;
+    margin-top: 2em;
     border: 1px solid #ccc;
     border-radius: 8px;
+   v
     &:disabled {
       background-color: #eee;
       color: #777;
@@ -107,4 +108,38 @@
     box-shadow: 0 0 1px rgb(0 0 0 / 0%);
     transition-duration: 0.2s;
     cursor: grabbing;
+  }
+
+  .button1 { 
+    background-color: $secondary;
+    padding: 0.8em; 
+    box-shadow: 1px 1px 1px $tertiary;
+  }
+
+  .button2 { 
+    background-color: transparent;
+    float: right;
+    margin-top: -15px;
+    font-size: 15px;
+  }
+
+  .button2:hover {
+    background-color: transparent;
+    animation: celebrate 2s infinite;
+  }
+
+  .button2::after {
+    content: '✅';
+  }
+
+  .button2:hover::after {
+    content: '🎉';
+  }
+
+  @keyframes celebrate {
+    50% {transform: rotate(360deg) scale(2);}
+  }
+
+  .button2:active {
+    background: linear-gradient(to right, rgba(0,0,0,0), teal), linear-gradient(to right, rgba(255,0,100,.3), rgba(255,100,127,.2)), linear-gradient(to top right, yellow, rgba(0,0,0,0)), radial-gradient(closest-corner at 20% 80%, yellow, red);;
   }

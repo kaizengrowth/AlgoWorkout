@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const apiRouter = require('./routes/api');
+const sessionRouter = require('./routes/sessionRouter');
 const mongoose = require('mongoose');
 
 const app = express();
@@ -35,7 +36,9 @@ db.on('error', err => {
 })
 
 // apiRouter
+app.use('/api/sessions', sessionRouter);
 app.use('/api', apiRouter);
+
 
 // catch-all route handler
 app.all('*', (req, res) => {

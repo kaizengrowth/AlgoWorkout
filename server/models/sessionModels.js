@@ -1,20 +1,14 @@
-import { Schema as _Schema, model } from 'mongoose';
-const Schema = _Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-// schema for 'algo'
+// schema for 'sessions'
 const sessionSchema = new Schema({
     startTime: {type: Date, default: Date.now},
-    endTime: {type: Date, default: Date.now},
-    questionID: number,
-    userID: number
+    endTime: {type: Date},
+    questionID: String,
+    userID: String
 });
 
-const sessionModel = model('sessions', sessionSchema );
+const sessionModel = mongoose.model('sessions', sessionSchema);
 
-export default sessionModel;
-
-/*
-* Date/Time start
-* Date/Time end
-* QuestionID
-* UserID (stored for redundancy?) */
+module.exports = sessionModel;
