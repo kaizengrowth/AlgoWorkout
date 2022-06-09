@@ -1,15 +1,30 @@
  import React, { Component } from 'react';
  import Question from '../components/Question.jsx';
+ import SessionContainer from './SessionContainer.jsx';
 
 
  class QuestionsContainer extends React.Component {
-
   constructor(props) {
     super(props);
+    this.state = {
+      modalShow: false
+    };
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+  }
+
+  showModal = () => {
+    console.log('show modal');
+    this.setState({modalShow: true});
+  }
+
+  hideModal = () => {
+    this.setState({modalShow: false});
   }
 
   render() {
-  
+    // console.log('showmodal!!!', this.showModal);
+
     const todaysQuestions = this.props.questions.map((q, i) => {
           console.log('qname: ' + q.name);
           return <Question 
@@ -18,6 +33,7 @@
             link={q.link} 
             dates={q.dates}
             patterns={q.patterns}
+            showModal={this.showModal}
           />
     });
   
@@ -25,6 +41,10 @@
       <div className="questionsContainer">
         <div className="innerbox">
           <h3>Today's Questions</h3>
+
+          <SessionContainer/>
+
+          {/* <SessionContainer show={this.state.modalShow} handleClose={this.hideModal}>Session</SessionContainer> */}
           <div>
             {console.log(todaysQuestions)}
             {todaysQuestions}

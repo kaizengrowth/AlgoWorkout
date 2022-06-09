@@ -11,7 +11,7 @@ const Question = (props) => (
       <LabeledText label="Prop 3" text='text' />
     </div>
     <div className="flex">
-      <button className='action1'>Work on it! 💪</button>
+      <button type="button" className='showModal' onClick={(e) => {alert(e.target.value)}}>Work on it! 💪</button>
       {/* <button className='action2'>Solved! 🙌</button> */}
     </div>
   </div>
