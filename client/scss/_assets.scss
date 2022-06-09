@@ -8,6 +8,15 @@
   
   body {
     padding-top: 4em;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); 
+  }
+
+  h2 {
+    color: white;
+  }
+
+  h3 {
+    color: rgb(71, 66, 66);
   }
   
   .outerBox {
@@ -24,6 +33,7 @@
     padding: $p1;
     width: 95%;
     margin: $p1 auto;
+    border-radius: 5px;
     box-shadow: $plainShadow;
     border: $lightBorder;
     background-color: $lightGray;
@@ -32,6 +42,7 @@
   .displayBox {
     overflow: auto;
     padding-top: $p1;
+    border-radius: 5px;
     background-color: $lightGray;
   }
   
@@ -48,6 +59,7 @@
     margin: $p0;
     font-size: .8em;
     border: $lightBorder;
+    border-radius: 5px;
     box-shadow: $plainShadow;
   }
   
