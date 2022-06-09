@@ -76,13 +76,23 @@
   
   button {
     background-color: $secondary;
+    color: rgb(80, 75, 75);
+    font-weight: bold;
     min-width: 4em;
     padding: 0.4em 1em;
     margin: 3px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    // &:disabled {
-    //   background-color: #eee;
-    //   color: #777;
-    // }
+    &:disabled {
+      background-color: #eee;
+      color: #777;
+    }
+  }
+
+  button:hover {
+    background-color: $primary;
+    color: white;
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+    transition-duration: 0.2s;
+    cursor: grabbing;
   }
