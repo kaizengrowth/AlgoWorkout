@@ -34,7 +34,6 @@ https://www.canva.com/design/DAFDJhBV-K8/8tAqo-lQIMRfDDib0COPXQ/view?utm_content
 
 <del>* [ ] Multiple steps: Figure out Redux actions / dispatch / reducer for getting a problem... </del>
 
-## Log 1
 ### Tue. 6/7/22 
 * [1:53pm] -- Finished initial setup for app: webpack, Node/Express, React/Redux, MongoDB
 * [3:47pm] -- Created [wireframe](/docs/wireframe_june7.png) in Excaliber, and roughly planned out database schema and React components
