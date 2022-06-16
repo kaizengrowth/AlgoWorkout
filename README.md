@@ -4,8 +4,14 @@
 https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/edit?usp=sharing
 ## MVP Core Features
 1. Function for choosing which problem a user should do next, based on their scores on previous problems across 15 categories.
-
 2. Timer for logging a user’s practice session on a given day.
+
+Presentation:
+https://www.canva.com/design/DAFDJhBV-K8/8tAqo-lQIMRfDDib0COPXQ/view?utm_content=DAFDJhBV-K8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+----------
+# Log
 
 ## Setup:
 * [x] Package.json dependencies. NPM install.
@@ -36,15 +42,12 @@ https://docs.google.com/document/d/1PuVTBu2CNC6ZLt0P0CWeue1tPP2sP9sweS5I7oEdl7w/
 * [7:03pm] -- Really struggled with getting anything to work on remote MongoDB database. Won't let me change settings or add endpoints. Finally moved to local MongoDB database. Had to delete and reinstall node modules to get this to work. Very frustrating!!
 
 * [8:30pm] -- SCOPE MODIFICATION:
---> Aim just to have leetcode problems display in dashboard.
---> Goal is to gain a better understanding of React/Redux and MongoDB/Mongoose. Don't worry too much about the product.
+--> Aim just to have leetcode problems display in dashboard
 
 ------ 
 
-* [10:27pm] -- Took a long break to have dinner with my partner's family, and having trouble getting motivated to start again. What do I need to do? 
-
---> Don't need to test GET/POST/DELETE endpoints in Postman because maybe it doesn't work so well...
---> Setting up MongoDB locally is a much better idea. Though I'm really tempted to switch to Postgres simply because I'm more familiar with it.
+* [10:27pm] -- 
+--> Setting up MongoDB locally is a much better idea. 
 
 Next step:
 Try to simply get one card into Mongo database and fetched into server.js
@@ -136,36 +139,6 @@ sessions in the user document, rather than a separate session document.
 *  [ ] Create forms for: 
     * [ ] Create question form
     * [ ] Update question form </del>
-
-
-================================================================
-
-## Log 2
-### Wed. 6/8/22
-* [7:10pm] Ready to tackle Task 2, and meet the basic requirements of the assignment.
-First: write express route for find one question by ID.
-* [7:49pm] Gave a rough try to GetQuestionByName ... FindOne()
-* [9:39pm] Display modal (for creating a session). Figured out stupid bug with button that won't click because of webpack double import: https://stackoverflow.com/questions/67099424/react-onclick-not-working-in-any-components After removing the build script from index.html, now the button works in a basic way.
-* [10:05pm] Working modal with pomodoro image! Easy wins.
-* [11:44pm] Too easy to waste a lot of time on fun styling once the main components are working! Go back to focusing on CRUD routes!
-* Worked past midnight on trying to create a session, by passing in Question ID. Could not do this on my own. Asked for help with Satty. The solution he helped me with by 5am allowed for a randomly generated questionID by "nanoid" library to be saved in the database, however, I am still unable to save the question ID of the question where the button is being pressed. 
-
-### Thu. 6/9/22
-* [8:46am] Spent another hour working on trying to pass questionID into the 'post' route to the session database. Able to follow the path of the data from the back end to the front end, and get more insight into the way the routing is working. However, still unable to solve error, not saving questionID from res.locals.session into new MongoDB document upon 'post' request and .save().
-
-Error message from front end:
-```
-Uncaught Error: Expected `onClick` listener to be a function, instead got a value of `object` type.
-```
-
-I've re-wrote this method and took it apart to try to understand why this error might be happening, but it seems like I am passing a function, not an object. What is this error referrring to? 
-
-* [9:39am] Finally realized that the values are actually updating correctly in the MongoDB database, but simply requires multiple page clicks to get to the end of over 1700+ session documents. Had just put up a help desk ticket on Slack, lol. Well, onto the next problem! 
-
-Will load some basic data into my database so that it is more useful for the demo.
-
-* [11:54am] Moving forward: continuing with update functionality for session. 
-
 
 
 ================================================================
