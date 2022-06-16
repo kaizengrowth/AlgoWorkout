@@ -142,6 +142,47 @@ sessions in the user document, rather than a separate session document.
 
 ================================================================
 
+<<<<<<< Updated upstream
+=======
+## Log 2
+### Wed. 6/8/22
+* [7:10pm] Ready to tackle Task 2, and meet the basic requirements of the assignment.
+First: write express route for find one question by ID.
+* [7:49pm] Gave a rough try to GetQuestionByName ... FindOne()
+* [9:39pm] Display modal (for creating a session). Figured out stupid bug with button that won't click because of webpack double import: https://stackoverflow.com/questions/67099424/react-onclick-not-working-in-any-components After removing the build script from index.html, now the button works in a basic way.
+* [10:05pm] Working modal with pomodoro image! Easy wins.
+* [11:44pm] Too easy to waste a lot of time on fun styling once the main components are working! Go back to focusing on CRUD routes!
+* Worked past midnight on trying to create a session, by passing in Question ID. Could not do this on my own. Asked for help with Satty. The solution he helped me with by 5am allowed for a randomly generated questionID by "nanoid" library to be saved in the database, however, I am still unable to save the question ID of the question where the button is being pressed. 
+
+### Thu. 6/9/22
+* [8:46am] Spent another hour working on trying to pass questionID into the 'post' route to the session database. Able to follow the path of the data from the back end to the front end, and get more insight into the way the routing is working. However, still unable to solve error, not saving questionID from res.locals.session into new MongoDB document upon 'post' request and .save().
+
+Error message from front end:
+```
+Uncaught Error: Expected `onClick` listener to be a function, instead got a value of `object` type.
+```
+
+I've re-wrote this method and took it apart to try to understand why this error might be happening, but it seems like I am passing a function, not an object. What is this error referrring to? 
+
+* [9:39am] Finally realized that the values are actually updating correctly in the MongoDB database, but simply requires multiple page clicks to get to the end of over 1700+ session documents. Had just put up a help desk ticket on Slack, lol. Well, onto the next problem! 
+
+Will load some basic data into my database so that it is more useful for the demo.
+
+* [11:54am] Moving forward: continuing with update functionality for session. 
+
+* [4:21pm] Lost 4.5 hours worth of work due to git rebase/merge conflicts. Transferred to new repo. What a nightmare!
+
+* [4:32pm] Rewinded to be able to show a demo of timestamp appearing, even though method is by questionID instead of sessionID. Given being short on time now, I will prioritize making the following impactful UI changes in my remaining time:
+
+---
+
+1. [ ] Click to complete a question in Today's Questions and have it appear in the main container
+
+2. [ ] Display metrics of some sort in the Metrics Container
+
+================================================================
+
+>>>>>>> Stashed changes
 ## Footnotes
 
 ### Credits:
